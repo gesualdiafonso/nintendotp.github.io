@@ -1,0 +1,1006 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Reset de elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Contenido tamaño mobile*/
+body{
+    min-width: 420px;
+    display: block;
+    max-width: 1680px;
+}
+h1{display: none;}
+img{
+    display: block;
+    width: 100%;
+}
+.onTop a{
+    width: 80px;
+    height: 100px;
+    position: fixed;
+    background: url(../img/onTop/marioclippart.png) center no-repeat;
+    background-size: 80px;
+    bottom: 0;
+    right: 0.2rem;
+    transition: background-position 0.5s ease, transform 0.5s ease;/*Adiciono transicion*/
+    z-index: 999;
+}
+.onTop a:active{
+    width: 80px;
+    height: 120px;
+    background-image: url(../img/onTop/eimario.png);
+    background-size: 50px;
+    transform: translateY(-10px); /*hago el elemento moverse*/
+    background-position: 0 -10px; /*hago con que el background lo suba al ejeY*/
+
+}
+header{
+    min-width: 420px;
+    height: auto;
+    background-color: #E60012;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+nav ul li{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Nunito Sans", sans-serif;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+main{
+    width: calc(100% - 20px);
+    min-width: 420px;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0;
+}
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+h3{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+p{
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    font-variation-settings: 
+        "wdth" 100,
+        "YTLC" 500;
+}
+strong{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-weight: 900;
+}
+em{
+    color: white;
+    font-style: italic;
+    font-weight: 200;
+}
+#intro{
+    width: 100%;
+    background-color: #E60012;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.container-intro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+.text-intro h2{
+    margin: 0.2rem 0;
+}
+.text-intro p{
+    font-size: 1em;
+    text-align: center;
+    color: whitesmoke;
+    padding: 0.5rem 0;
+}
+#caracter{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0.659rem;
+    background-color: black;
+    color: white;
+}
+.container-carac{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.text-present h3{
+    text-align: justify;
+    margin: 0;
+    padding: 0.6rem 0;
+}
+.text-pantalla h3{
+    text-align: end;
+    margin: 0;
+    padding: 0.6rem 0;
+}
+.ajustes h3{
+    text-align: justify;
+    margin: 0;
+    padding: 0.6rem 0;
+}
+.ajustes h4{
+    text-align: center;
+    margin: 0;
+    padding: 1.2rem 0;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.conexion h3{
+    text-align: end;
+    font-size: 1.5rem;
+}
+.almacenamiento h3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0.6rem 0;
+}
+.img-carac{
+    margin: 0.8rem auto;
+}
+.img-carac img{
+    width: 100%;
+    border-radius: 20px;
+}
+#como_jugar{
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding: 0;
+}
+#como_jugar strong{
+    color: rgb(67, 67, 67);
+}
+#como_jugar em{
+    color: rgb(67, 67, 67);
+}
+#como_jugar .boxjugar strong{
+    color: rgb(238, 147, 147);
+}
+.container-jugar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.boxjugar{
+    width: 80%;
+    margin: 2rem auto;
+}
+.img-comojugar img{
+    border-radius: 20px;
+    outline: 2px solid red;
+    outline-offset: -10px;
+}
+
+#controles{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0.659rem;
+    background-color: black;
+    color: white;
+}
+#juego {
+    margin: 0;
+    padding: 0;
+}
+
+.galeria {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Carousel */
+.carousel-wrapper {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: auto;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    border-radius: 4px;
+    align-items: stretch;
+    cursor: grab;
+}
+
+.slide {
+    display: inline-flex;
+    min-width: 420px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Controls */
+.slider-control {
+    display: inline-flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    background-color: #fff;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: box-shadow 0.12s ease;
+    cursor: pointer;
+}
+
+.slider-control.arrow-left {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.slider-control.arrow-right {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.slider-control:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+#formulario{
+    width: 100%;
+    min-width: 420px;
+    height: auto;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 0.6rem 0.5rem;
+}
+#formulario h3{
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    margin: 1rem auto;
+    border-bottom: 2px solid whitesmoke;
+}
+
+#contactForm{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1680px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: calc(100% - 20px);
+}
+.form-group label{
+    width: calc(100% - 20px);
+    height: auto;
+    margin: 0.5rem auto;
+    padding: 0.5rem 0;
+}
+.form-group input{
+    width: calc(100% - 20px);
+    height: 30px;
+    font-size: 1rem;
+    padding: 0.4rem;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.entrega{
+    padding: 0;
+    margin: 0;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+.entrega h4{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid whitesmoke;
+    margin: 1rem auto;
+    padding-top: 1rem;
+}
+.entrga-group{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.entrega-group label{
+    width: 100%;
+    height: auto;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+}
+.entrega-group input{
+    height: 30px;
+    font-size: 1rem;
+    padding: 0.4rem;
+    border-radius: 20px;
+    background-color: #fff;
+}
+#ubicacion{
+    width: calc(100% - 20px);
+    height: 30px;
+    padding: 0.4rem;
+}
+#numero{
+    width: 30%;
+    margin: 1rem auto;
+    padding: 0.6rem;
+}
+#provincia{
+    width: 40%;
+    margin: 1rem auto;
+    padding: 0.6rem;
+}
+#codigopostal{
+    width: 40%;
+    margin: 1rem auto;
+    padding: 0.6rem;
+}
+.product{
+    padding: 0;
+    margin: 0;
+    width: calc(100% - 30px);
+}
+.product h4{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid whitesmoke;
+    margin: 1rem auto;
+    padding-top: 1rem;
+}
+.product-group{
+    width: 100%;
+    margin: 0.6rem auto;
+    padding: 0.6rem;
+}
+#modelo{
+    width: 50%;
+    background-color: #fff;
+    color: black;
+    border-radius: 20px;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+}
+.quant{
+    margin: 0.6rem auto;
+    padding: 0.6rem;
+}
+#cantidad{
+    width: 50px;
+    height: auto;
+    border-radius: 20px;
+    padding: 0 0.5rem;
+    text-align: center;
+}
+.payment{
+    width: 100%;
+    height: auto;
+}
+.payment label{
+    padding: 0.6rem;
+}
+#pagamento{
+    width: 40%;
+    background-color: #fff;
+    color: black;
+    border-radius: 20px;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+}
+#enviar{
+    width: calc(100% - 10px);
+    font-size: 1.5rem;
+    height: 40px;
+    margin: 2rem auto;
+    background-color: #E60012;
+    color: white;
+    border-radius: 15px;
+    border: none;
+}
+footer{
+    width: 100%;
+    min-width: 420px;
+    height: auto;
+    background-color: #E60012;
+    margin-top: 0.6rem;
+}
+#creador{
+    width: calc(100% - 20px);
+    display: flex;
+    height: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.659rem;
+}
+#creador ul{
+    list-style: none;
+    margin: 0.8rem 0;
+}
+#creador ul li{
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+#creador a{
+    text-decoration: none;
+    color: #fff;
+}
+#creador img{
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+#redes {
+    width: calc(100% - 20px);
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.659rem;
+}
+
+#redes ul {
+    display: flex;
+    padding: 0;
+}
+
+#redes ul li {
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+}
+
+#redes ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+}
+
+#fb a {
+    background-image: url(../img/iconos/facebook.png);
+}
+
+#ig a {
+    background-image: url(../img/iconos/instagram.png);
+}
+
+#ln a {
+    background-image: url(../img/iconos/linkedin.png);
+}
+
+#bh a {
+    background-image: url(../img/iconos/behance.png);
+}
+@media screen and (min-width: 768px){
+    header{
+        width: 100%;
+        height: auto;
+    }
+    .onTop a{
+        right: 30px;
+    }
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+    }
+    nav ul li{
+        font-size: 2rem;
+    }
+    main{
+        width: 90%;
+        margin: 0 auto;
+    }
+    h2{
+        font-size: 3.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4{
+        font-size: 1.9rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    #controles{
+        border-radius: 20px;
+    }
+    .slide {
+        width: calc(55% - 15px);
+        height: auto;
+    }
+    .slide img{
+        width: 100%;
+    }
+    #formulario{
+        width: 100%;
+    }
+    #formulario h3{
+        font-size: 2.5rem;
+    }
+    .form-group{
+        flex-direction: row;
+        width: 100%;
+    }
+    .form-group label{
+        width: 20%;
+        font-size: 1.5rem;
+        margin: 1.5rem auto;
+    }
+    .form-group input{
+        width: 100%;
+        height: 40px;
+        margin: 1.5rem auto;
+    }
+    .entrega{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        align-content: center;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .entrega h4{
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    .entrega-group{
+        width: 50%;
+    }
+    .entrega-group label{
+        font-size: 1.5rem;
+    }
+    
+    #ubicacion{
+        width: 55%;
+        margin: 1rem 0.6rem;
+        display: inline;
+    }
+    #numero{
+        width: 55%;
+        margin: 1rem auto;
+    }
+    #provincia{
+        width: 55%;
+        margin: 1rem auto;
+    }
+    #codigopostal{
+        width: 50%;
+        margin: 1rem auto;
+    }
+    .product{
+        width: 100%;
+    }
+    .product h4{
+        font-size: 2.5rem;
+    }
+    .product-group{
+        width: 100%;
+    }
+    .product-group label{
+        font-size: 1.5rem;
+    }
+    #modelo{
+        width: 25%;
+        height: 30px;
+        margin: 0 0.6rem;
+    }
+    .quant label{
+        font-size: 1.5rem;
+    }
+    .quant #cantidad{
+        width: 60px;
+        height: 30px;
+        margin: 0 0.6rem;
+    }
+    .payment label{
+        font-size: 1.5rem;
+    }
+    #pagamento{
+        width: 26%;
+        height: 30px;
+    }
+    #enviar{
+        width: 80%;
+        height: 70px;
+        font-size: 2.5rem;
+        margin: 3rem 4rem;
+    }
+
+}
+@media screen and (min-width:990px) and (max-width: 1680px){
+    header{
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        z-index: 99;
+    }
+    nav ul{
+        width: 80%;
+        flex-direction: row;
+        margin:0 auto;
+        padding: 10px 0;
+    }
+    nav ul li{
+        margin: 0 auto;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    nav a::after{
+        content: ' ';
+        width: 0%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s ease-in-out;
+    }
+    nav a:hover::after{
+        width: 100%;
+    }
+    main{
+        width: 80%;
+        padding-top: 60px;
+        margin: 0 auto;
+    }
+    img{
+        width: 50%;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    #intro{
+        width: 100%;
+    }
+    .container-intro{
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0;
+        gap: 0;
+    }
+    .container-intro .imgintro {
+        width: 48%;
+    }
+    .container-intro .imgintro img{
+        width: 100%;
+    }
+    .container-intro .text-intro{
+        width: 52%;
+        margin: 0 0.5rem;
+    }
+    .container-intro .text-intro h2{
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .container-intro .text-intro h3{
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    .container-intro .text-intro p{
+        font-size: 1.4rem;
+        text-align: left;
+        padding: 2rem 1rem;
+    }
+    #caracter{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    #caracter h2{
+        padding: 2rem;
+    }
+    .container-carac{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0.9rem 0.6rem;
+    }
+    .container-carac .text-present{
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .container-carac .text-present h3{
+        font-size: 1.9rem;
+        margin-top: 3.5rem;
+    }
+    .container-carac .text-pantalla{
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .container-carac .text-pantalla h3{
+        font-size: 1.9rem;
+        margin-top: 5rem;
+    }
+    .container-carac .img-carac{
+        width: 100%;
+    }
+    .container-carac .img-carac img{
+        width: 100%;
+    }
+    .container-carac .ajustes{
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .container-carac .ajustes h3{
+        margin-top: 3.8rem;
+    }
+    .container-carac .ajustes h4{
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 15rem;
+    }
+    .conexion{
+        margin: 2rem;
+    }
+    .conexion h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .conexion p{
+        font-size: 1.5rem;
+    }
+    .almacenamiento{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        margin: 0;
+    }
+    .almacenamiento .img-carac{
+        width: 45%;
+        margin: 0;
+    }
+    .almacenamiento .almacenamiento-txt{
+        width: 55%;
+    }
+    .almacenamiento .almacenamiento-txt h3{
+        font-size: 2rem;
+        margin-top: 8rem;
+    }
+    .audio{
+        margin: 2rem;
+        padding-bottom: 2rem;
+    }
+    .audio h3{
+        font-size: 2rem;
+    }
+    .audio p{
+        font-size: 1.5rem;
+    }
+    .container-jugar{
+        flex-direction: row;
+        gap: 20px;
+    }
+    .container-jugar .boxjugar{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 450px;
+        background-color: black;
+        border-radius: 20px;
+        color: white;
+    }
+    .container-jugar .boxjugar p{
+        font-size: 1.2rem;
+        margin: 0.5rem 1rem;
+    }
+    .container-jugar .boxjugar .img-comojugar{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .container-jugar .boxjugar .img-comojugar img{
+        width: 100%;
+        height: 200px;
+    }
+    #controles{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    .control{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .control .control-text{
+        width: 50%;
+        padding: 0 0.5rem;
+    }
+    .control .control-text h2{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .control .control-text h3{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .control .control-text p{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .control .img-control{
+        width: 50%;
+        margin-top: 5rem;
+        margin-bottom: 0;
+    }
+    .control .img-control img{
+        width: 100%;
+    }
+    .img-friends img{
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+    .friends{
+        margin: 2rem auto;
+    }
+    .friends p{
+        text-align: center;
+    }
+    #juegos{
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+    #juegos p{
+        margin: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .slide {
+        min-width: calc(50% - 5px);
+    }
+    #formulario h2{
+        font-size: 3.5rem;
+    }
+    #formulario h3{
+        width: 80%;
+    }
+    .formulario{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .form-group{
+        width: 100%;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .form-group label{
+        width: 20%;
+        margin: 0;
+    }
+    .form-group input{
+        width: 70%;
+        margin: 0;
+    }
+    #telefone{
+        width: 30%;
+    }
+    .entrga-group label{
+        width: 20%;
+        margin: 0;
+    }
+    .entrega-group input{
+        width: 70%;
+        margin: 0;
+    }
+    #ubicacion{
+        width: 52%;
+    }
+    #numero{
+        width: 50%;
+    }
+    #codigopostal{
+        width: 45%;
+    }
+    #enviar{
+        width: 90%;
+        margin: 2rem;
+    }
+    #creador ul li{
+        font-size: 1.5rem;
+    }
+    #creador img{
+        width: 90%;
+    }
+    #redes ul li a {
+        transition: background-color 0.3s ease, background-image 0.3s ease;
+    }
+    #fb a:hover{
+        background-color: #fff;
+    }
+    #ig a:hover{
+        background-color: white;
+    }
+    #ln a:hover{
+        background-color: #fff;
+    }
+    #bh a:hover{
+        background-color: #fff;
+    }
+}
